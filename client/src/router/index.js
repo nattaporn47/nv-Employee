@@ -15,6 +15,11 @@ import EmployeeCreate from '../components/Employee/CreateEmployee.vue'
 import EmployeeEdit from '../components/Employee/EditEmployee.vue'
 import EmployeeShow from '../components/Employee/ShowEmployee.vue'
 
+import BookingIndex from '../components/Bookingtrinticket/Index.vue'
+import BookingCreate from '../components/Bookingtrinticket/Create.vue'
+import BookingEdit from '../components/Bookingtrinticket/Edit.vue'
+import BookingShow from '../components/Bookingtrinticket/Show.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -87,6 +92,26 @@ const router = createRouter({
       path: '/employees/:employeeId',
       name: 'employee-show',
       component: EmployeeShow
+    },
+    {
+      path: '/bookings',
+      name: 'bookings',
+      component: BookingIndex
+    },
+    {
+      path: '/booking/create',
+      name: 'booking-create',
+      component: BookingCreate
+    },
+    {
+      path: '/booking/:id',
+      name: 'booking-show',
+      component: BookingShow
+    },
+    {
+      path: '/booking/edit/:id',
+      name: 'booking-edit',
+      component: BookingEdit
     }
 
   ]
